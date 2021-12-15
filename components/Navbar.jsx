@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import Sidebar from './Sidebar';
@@ -11,9 +11,25 @@ const Navbar = () => {
     setSidebar(!sidebar);
   };
 
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 10) {
+        setShow(true);
+      } else setShow(false);
+    });
+    return () => {
+      window.removeEventListener('scroll', () => {});
+    };
+  });
+
   return (
     <>
-      <header className="glass fixed top-0 z-50 bg-transparent flex justify-center items-center p-3 h-auto w-full shadow-lg md:flex-col">
+      <header
+        className={`bg-transparent fixed top-0 z-50 flex justify-center items-center p-3 h-auto w-full shadow-lg md:flex-col transition-all duration-500 ease-in-out ${
+          show && 'bg-white text-black'
+        }`}
+      >
         <div>
           <Link href={'/'} passHref>
             <a>
