@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 const Popular = ({ drinks }) => {
-  const cocktails = drinks.slice(0, 9);
+  const cocktails = drinks.slice(0, 24);
 
   return (
     <div className="max-w-screen-2xl m-auto">

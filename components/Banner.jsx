@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import banner from '../../assets/pexels-pixabay-301692.jpg';
+import banner from '../assets/pexels-pixabay-301692.jpg';
 
 const Banner = () => {
   return (
