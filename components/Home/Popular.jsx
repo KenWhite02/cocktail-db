@@ -4,7 +4,7 @@ const Popular = ({ drinks }) => {
   const cocktails = drinks.slice(0, 9);
 
   return (
-    <div>
+    <div className="max-w-screen-2xl m-auto">
       <h2 className="text-black font-bold text-4xl mt-5 text-center">
         Popular drinks
       </h2>
@@ -16,7 +16,7 @@ const Popular = ({ drinks }) => {
           return (
             <div
               key={idDrink}
-              className="group shadow-2xl cursor-pointer my-10 mx-3 bg-white transition-all duration-500 ease-in-out hover:scale-105"
+              className="group shadow-2xl cursor-pointer my-10 mx-3 md:mx-5 lg:mx-7 xl:10 bg-white transition-all duration-500 ease-in-out hover:scale-105"
             >
               <Image
                 src={strDrinkThumb}
