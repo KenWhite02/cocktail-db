@@ -19,8 +19,8 @@ const Sidebar = ({ handleSidebar, sidebar }) => {
       <div
         className={
           sidebar
-            ? 'bg-[#e1efe6] fixed inset-y-0 py-4 right-0 w-64 sm:w-80 transition-all duration-1000 opacity-100'
-            : 'bg-[#e1efe6] fixed inset-y-0 py-4 -right-full w-64 sm:w-80 transition-all duration-700 opacity-0'
+            ? 'bg-white fixed inset-y-0 py-4 right-0 w-64 sm:w-80 transition-all duration-700 opacity-100'
+            : 'bg-white fixed inset-y-0 py-4 -right-full w-64 sm:w-80 transition-all duration-700 opacity-0'
         }
       >
         <button
